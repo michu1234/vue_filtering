@@ -27,6 +27,10 @@
     @include media-query(tablet){
         grid-template-columns: repeat(2, auto);
     }
+
+    @include media-query(desktop){
+        grid-template-columns: repeat(3, auto);
+    }
 }
 
 .listing__products {

@@ -1,6 +1,6 @@
 <template>
   <div class="productlist">
-    <filtering/>
+    <!-- <filtering/> -->
     <listing/>
   </div>
 </template>

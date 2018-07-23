@@ -7,6 +7,9 @@
 
 .filtering {
     @extend %flex;
+    position: fixed;
+    z-index: 1;
+    background: $pure-white;
     flex-direction: column;
     max-width: 300px;
     border: 1px solid $almost-white;
