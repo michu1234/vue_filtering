@@ -1,0 +1,16 @@
+@import '../helpers/placeholders';
+@import '../helpers/variables';
+@import '../helpers/mixins/clearfix';
+@import '../helpers/mixins/list-reset';
+@import '../helpers/mixins/responsive';
+
+
+.filtering {
+    @extend %flex;
+    flex-direction: column;
+    max-width: 300px;
+    border: 1px solid $almost-white;
+    padding: 10px;
+    min-height: 94vh;
+    box-shadow: 2px 10px 20px $almost-white;
+}

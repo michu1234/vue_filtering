@@ -1,0 +1,58 @@
+@import '../helpers/placeholders';
+@import '../helpers/variables';
+@import '../helpers/mixins/clearfix';
+@import '../helpers/mixins/list-reset';
+@import '../helpers/mixins/responsive';
+
+header {
+    padding-bottom: 60px;
+    width: 100%;
+}
+
+.nav__menu {
+    @include list-reset();
+    @extend %flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin-left: auto;
+
+    li:not(:first-child) {
+        display: none;
+
+        @include media-query(tablet) {
+            display: block;
+        }
+    }
+
+    li {
+        max-width: 60px;
+        width: 100%;
+    }
+
+    li:first-child {
+        margin-right: auto;
+        font-size: 1.4rem;
+
+        a:hover {
+            text-decoration: none;
+        }
+    }
+
+    li:last-child {
+        a {
+            color: $sunny-yellow;
+    }
+  }
+}
+
+.nav__mobilemenu {
+    @extend %absolute;
+    right: 45px;
+    top: 5px;
+    font-size: 2rem;
+    cursor: pointer;
+
+    @include media-query(tablet) {
+        display: none;
+    }
+}

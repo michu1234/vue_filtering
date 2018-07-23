@@ -1,0 +1,41 @@
+@import '../helpers/placeholders';
+@import '../helpers/variables';
+@import '../helpers/mixins/clearfix';
+@import '../helpers/mixins/list-reset';
+@import '../helpers/mixins/responsive';
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Montserrat';
+}
+
+body {
+    padding: 0 15px 0 15px;
+}
+
+label {
+    padding: 15px 0 5px 0;
+}
+
+a {
+    color: $nice-navy;
+    text-decoration: none;
+    text-transform: uppercase;
+    @extend %transition;
+
+    &:hover {
+        text-decoration: underline;
+        letter-spacing: 2px;
+        @extend %transition;
+    }
+}
