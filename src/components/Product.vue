@@ -1,11 +1,11 @@
 <template>
     <div class="product">
         <div>
-            <img src="http://icons.iconarchive.com/icons/pelfusion/long-shadow-media/256/Mobile-Phone-icon.png" alt="">
+            <img v-if="completeInfo" src="http://icons.iconarchive.com/icons/pelfusion/long-shadow-media/256/Mobile-Phone-icon.png" alt="">
         </div>
         <div class="product__wrapper">
             <h2>{{productInfo.name}}</h2>
-            <ul class="product__features">
+            <ul v-if="completeInfo" class="product__features">
                 <li v-if="productInfo.screen">{{productInfo.screen | addUnit('"')}}</li>
                 <li v-if="productInfo.ram">{{productInfo.ram | addUnit(' MB')}}</li>
                 <li v-if="productInfo.battery">{{productInfo.battery | addUnit(' mAh')}}</li>
@@ -20,11 +20,18 @@
 
 <script>
 import {mixin} from '../mixin.js'
+import {mapState} from 'vuex'
+
     export default {
         props: {
             productInfo: Object
         },
-        mixins: [mixin]
+        mixins: [mixin],
+        computed: {
+            ...mapState([
+                'completeInfo'
+            ])
+        }
     }
 </script>
 

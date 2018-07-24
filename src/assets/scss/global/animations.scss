@@ -1,0 +1,14 @@
+@import '../helpers/placeholders';
+@import '../helpers/variables';
+@import '../helpers/mixins/clearfix';
+@import '../helpers/mixins/list-reset';
+@import '../helpers/mixins/responsive';
+
+
+.slide-enter-active, .slide-leave-active {
+    transition: all .5s;
+  }
+  .slide-enter, .slide-leave-to /* .slide-leave-active below version 2.1.8 */ {
+    margin-left: -300px;
+    opacity: 0;
+  }

@@ -7,7 +7,6 @@
 
 .filtering {
     @extend %flex;
-    position: fixed;
     z-index: 1;
     background: $pure-white;
     flex-direction: column;
@@ -16,4 +15,11 @@
     padding: 10px;
     min-height: 94vh;
     box-shadow: 2px 10px 20px $almost-white;
+    margin-right: 25px;
+}
+
+#slider {
+    width: 100%;
+    height: 100px;
+    border: 1px solid red;
 }

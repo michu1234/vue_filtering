@@ -6,4 +6,38 @@
 
 .productlist {
     @extend %flex;
+    justify-content: center;
+}
+
+.productlist__controls {
+    text-align: right;
+
+    img {
+        max-width: 25px;
+        @extend %pointer;
+        filter: contrast(5%);
+
+        &:hover {
+            transform: rotate(200deg);
+            @extend %transition;
+            will-change: auto;
+        }
+    }
+}
+
+.productlist__sidebar {
+    position: relative;
+}
+
+.productlist__sidebar__button {
+    position: absolute;
+    background: $pure-white;
+    font-size: 1.5rem;
+    padding: 10px 3px 10px 3px;
+    border: 1px solid $almost-white;
+    right: 5px;
+    top: 50vh;
+    border-radius: 5px;
+    color: rgb(156, 156, 156);
+    @extend %pointer;
 }

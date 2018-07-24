@@ -1,4 +1,4 @@
-input[type=text], select {
+input[type=text] {
     border-radius: 2px;
     border: 1px solid $almost-white;
     min-height: 30px;
@@ -7,11 +7,3 @@ input[type=text], select {
     text-align: center;
 }
 
-.input--short {
-    max-width: 30px;
-}
-
-.select--medium {
-    max-width: 200px;
-    width: 100%;
-}

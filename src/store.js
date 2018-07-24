@@ -7,7 +7,10 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    products: ''
+    products: '',
+    completeInfo: true,
+    filteringMenu: true,
+    dataLoaded: false
   },
   // getters: {
   //   filteredProducts(state) {
@@ -20,9 +23,17 @@ export default new Vuex.Store({
   mutations: {
     FETCH_USERS(state, data) {
       state.products = data;
+      state.dataLoaded = true;
+      console.log(state.dataLoaded);
   },
     findProduct(state, name) {
       state.products.filter((d)=>{return d.name.includes(name)})
+    },
+    changeProductInfo(state, action) {
+      state.completeInfo = action;
+    },
+    toggleSidebar(state) {
+      state.filteringMenu =! state.filteringMenu;
     }
   },
   actions: {

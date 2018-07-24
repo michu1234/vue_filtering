@@ -21,7 +21,7 @@
     },
     computed: {
       ...mapState([
-      'products'
+      'products',
     ])
     },
     data() {
